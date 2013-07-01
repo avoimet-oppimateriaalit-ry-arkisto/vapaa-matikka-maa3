@@ -5,12 +5,16 @@ skaalaa(2)
 O = geom.piste(0, 0, piirra = False)
 w = geom.ympyra(O, 1)
 f = lambda x: (cos(pi * x / 180), sin(pi * x / 180))
-A = f(-60)
+a = -60
+c = 30
+A = f(a)
 B = f(135)
-C = f(30)
+C = f(c)
 geom.jana(A, B)
 geom.jana(B, C)
 geom.kulma(A, B, C)
+with paksuus(3):
+	geom.kaari(O, 1, a, c)
 \end{luoKuva}
 \laatikko{
 Ympyrän \termi{kehäkulma}{kehäkulmalla} tarkoitetaan kulmaa, jonka kärki on ympyrän kehällä ja kyljet ympyrän jänteitä. Kehäkulma erottaa ympyrän kehältä kaaren.
