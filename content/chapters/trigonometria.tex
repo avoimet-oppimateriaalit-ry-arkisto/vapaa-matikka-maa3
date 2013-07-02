@@ -8,12 +8,34 @@ suorakulmaisilla kolmioilla, joilla on samansuuruinen terävä kulma. Näille su
 nimetty seuraavasti.
 
 \laatikko{
-\termi{sini}{Sini}: $\sin \alpha = \frac{\textrm{kulman vastaisen kateetin pituus}}
+\termi{sini}{Sini}: $\sin \alpha = \frac{\textrm{kulman $\alpha$ vastaisen kateetin pituus}}
 {\textrm{hypotenuusan pituus}}$ \\
-\termi{kosini}{Kosini}: $\cos \alpha = \frac{\textrm{kulman viereisen kateetin pituus}}
+\termi{kosini}{Kosini}: $\cos \alpha = \frac{\textrm{kulman $\alpha$ viereisen kateetin pituus}}
 {\textrm{hypotenuusan pituus}}$ \\
-\termi{tangentti}{Tangentti}: $\tan \alpha = \frac{\textrm{kulman vastaisen kateetin pituus}}
-{\textrm{kulman viereisen kateetin pituus}}$
+\termi{tangentti}{Tangentti}: $\tan \alpha = \frac{\textrm{kulman $\alpha$ vastaisen kateetin pituus}}
+{\textrm{kulman $\alpha$ viereisen kateetin pituus}}$
 }
+
+\begin{esimerkki}
+\begin{center}
+\begin{kuva}
+	A = (4, 3)
+	B = (0, 0)
+	C = (4, 0)
+	geom.jana(A, B, "$c$")
+	geom.jana(B, C, "$a$")
+	geom.jana(C, A, "$b$")
+	geom.suorakulma(A, C, B)
+\end{kuva}
+\end{center}
+Kuvan kolmiossa pätee
+\[
+\begin{array}{ccc}
+\displaystyle\sin \alpha = \frac{b}{c}, &
+\displaystyle\cos \alpha = \frac{a}{c}, &
+\displaystyle\tan \alpha = \frac{b}{a}.
+\end{array}
+\]
+\end{esimerkki}
 
 ...yksikköympyrä, tylpän kulman siniä ja kosinia tarvitaan...
