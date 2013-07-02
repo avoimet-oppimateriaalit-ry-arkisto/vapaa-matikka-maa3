@@ -34,9 +34,21 @@ Kaksi puolisuoraa, joilla on yhteinen alkupiste, jakavat tason kahteen osaan ja 
 kutsutaan kulman kärjeksi ja puolisuoria kulman kyljiksi. Kulman sisälle jäävää tasoaluetta
 kutsutaan kulman aukeamaksi.
 
+\begin{center}
+\begin{kuva}
+	skaalaa(0.5)
+	A = (4, -3)
+	B = geom.piste(0, 0, r"k\"{a}rki", suunta = 180)
+	C = (4, 3)
+	geom.jana(B, A, "oikea kylki", kohta = 0.8)
+	geom.jana(B, C, "vasen kylki", puoli = False, kohta = 0.8)
+	geom.kulma(A, B, C, "aukeama")
+\end{kuva}
+\end{center}
+
 Kulman suuruutta on tähän mennessä mitattu \termi{aste}{asteilla} (merkitään symbolilla $^{\circ}$). Jos kulman kyljet muodostavat suoran,
 kulmaa sanotaan oikokulmaksi, ja sen suuruus on $180^{\circ}$.
-Jos kulman kyljet ovat sama puolisuora, niin kulma on täysikulma ($360^{\circ}$, jos aukeamaksi lasketaan
+Jos kulman kyljet ovat sama puolisuora, niin kulma on täysikulma ($360^{\circ}$), jos aukeamaksi lasketaan
 koko taso. Jos taas kulman aukeama on pelkästään tämä puolisuora, kulmaa sanotaan
 nollakulmaksi ($0^{\circ}$).
 
