@@ -1,4 +1,4 @@
-\section*{Peruskäsitteitä}
+\section*{Piste ja suora}
 
 Monet seuraavista käsitteistä on esitelty jo peruskoulussa, mutta palautetaan ne lyhyesti
 mieleen.
@@ -31,6 +31,8 @@ Piste $B$ jakaa suoran $s$ kahteen puolisuoraan, toinen sisältää pisteen $A$ 
 \end{kuva}
 \end{center}
 \end{esimerkki}
+
+\section*{Kulma}
 
 Kaksi puolisuoraa, joilla on yhteinen alkupiste, jakavat tason kahteen osaan ja rajaavat siten kaksi \termi{kulma}{kulmaa}. Yhteistä alkupistettä
 kutsutaan kulman kärjeksi ja puolisuoria kulman kyljiksi. Kulman sisälle jäävää tasoaluetta
@@ -169,4 +171,46 @@ Mikäli kulman oikealla kyljellä oleva piste, kärkipiste ja vasemmalla kyljell
 \]
 \end{esimerkki}
 
+Kun kulmat joiden suuruudet ovat $\alpha$ ja $\beta$ asetetaan vierekkäin, muodostuu kulma, jonka suuruus on $\alpha + \beta$.
 
+\begin{center}
+\begin{kuva}
+	skaalaa(2)
+	
+	f = lambda x: (cos(pi * x / 180), sin(pi * x / 180))
+	A = f(30)
+	B = f(105)
+	C = f(145)
+	O = (0, 0)
+	
+	geom.jana(O, A)
+	geom.jana(O, B)
+	geom.jana(O, C)
+	
+	geom.kulma(A, O, B, r"$\beta$")
+	geom.kulma(B, O, C, r"$\alpha$", kasvata = 0.1)
+	geom.kulma(A, O, C, r"$\alpha + \beta$", kasvata = 0.6, suunta = 82)
+\end{kuva}
+\end{center}
+
+Jos $\alpha > \beta$, voidaan muodostaa kulma jonka suuruus on $\alpha - \beta$ asettamalla kulma, jonka suuruus on $\beta$ kulman, jonka suuruus on $\alpha$ sisäpuolelle siten että toiset kyljet yhtyvät.
+
+\begin{center}
+\begin{kuva}
+	skaalaa(2)
+	
+	f = lambda x: (cos(pi * x / 180), sin(pi * x / 180))
+	A = f(30)
+	B = f(105)
+	C = f(145)
+	O = (0, 0)
+	
+	geom.jana(O, A)
+	geom.jana(O, B)
+	geom.jana(O, C)
+	
+	geom.kulma(B, O, C, r"$\beta$", kasvata = 0.7)
+	geom.kulma(A, O, C, r"$\alpha$", suunta = 80)
+	geom.kulma(A, O, B, r"$\alpha - \beta$", kasvata = 0.6)
+\end{kuva}
+\end{center}
