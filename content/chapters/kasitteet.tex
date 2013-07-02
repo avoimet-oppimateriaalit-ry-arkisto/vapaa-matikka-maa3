@@ -10,6 +10,26 @@ Suoralla oleva piste jakaa suoran kahdeksi \termi{puolisuora}{puolisuoraksi}. Hu
 alkupiste kuuluu kumpaankin puolisuoraan. Kaksi suoralla olevaa pistettä erottavat suorasta
 \termi{jana}{janan}, ja nämä kaksi pistettä ovat janan päätepisteet.
 
+TODO: nimeämiskäytännöt
+
+\begin{esimerkki}
+Suora $s$ sisältää pisteet $A$, $B$ ja $P$ mutta ei pistettä $C$. Suora $l$ sisältää pisteet $B$ ja $C$ mutta ei pisteitä $A$ ja $P$. Suoraa $s$ voidaan kutsua myös suoraksi $AB$, $AP$ tai $BP$ ja suoraa $l$ suoraksi $BC$.
+
+Piste $B$ jakaa suoran $s$ kahteen puolisuoraan, toinen sisältää pisteen $A$ ja toinen pisteen $P$. Näitä puolisuoria voidaan kutsua esimerkiksi puolisuoriksi $BA$ ja $BP$.
+
+\begin{center}
+\begin{kuva}
+	rajaa(minX = -4, maxX = 4, minY = -2, maxY = 6)
+	A = geom.piste(-3, 0, "$A$", suunta = -60)
+	B = geom.piste(1, 2, "$B$", suunta = 80)
+	C = geom.piste(-2, 5, "$C$", suunta = 50)
+	P = geom.piste(3, 3, "$P$", suunta = -60)
+	s = geom.suora(A, B, "$s$")
+	l = geom.suora(B, C, "$l$")
+\end{kuva}
+\end{center}
+\end{esimerkki}
+
 Kaksi puolisuoraa, joilla on yhteinen alkupiste, jakavat tason kahteen osaan ja rajaavat siten kaksi \termi{kulma}{kulmaa}. Yhteistä alkupistettä
 kutsutaan kulman kärjeksi ja puolisuoria kulman kyljiksi. Kulman sisälle jäävää tasoaluetta
 kutsutaan kulman aukeamaksi.
