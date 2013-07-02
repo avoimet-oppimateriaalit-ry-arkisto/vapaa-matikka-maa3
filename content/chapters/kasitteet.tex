@@ -120,14 +120,15 @@ B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.suorakulma
 \begin{kuva}
 skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
 A = (sin(pi/2), cos(pi/2))
-B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+B = geom.piste(0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
 \end{kuva}
 \centering oikokulma \\$\alpha = 180^\circ$
 \end{minipage}
 \begin{minipage}{3cm}
 \begin{kuva}
 skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
-geom.jana((0, 0), (0, 1))
+O = geom.piste(0, 0)
+geom.jana(O, (0, 1))
 \end{kuva}
 \centering nollakulma \\$\alpha = 0^\circ$
 \end{minipage}
@@ -135,7 +136,7 @@ geom.jana((0, 0), (0, 1))
 \begin{kuva}
 skaalaa(1.5); rajaa(minX = -1, minY = -1, maxX = 1, maxY = 0.5); varaaRajaus()
 A = (sin(pi - 0.001), cos(pi - 0.001))
-B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+B = geom.piste(0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
 \end{kuva}
 \centering täysikulma \\$\alpha = 360^\circ$
 \end{minipage}
