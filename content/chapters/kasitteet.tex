@@ -32,6 +32,24 @@ Piste $B$ jakaa suoran $s$ kahteen puolisuoraan, toinen sisältää pisteen $A$ 
 \end{center}
 \end{esimerkki}
 
+Kaksi suoraa voivat joko olla sama suora, leikata toisiaan täsmälleen yhdessä pisteessä tai olla leikkaamatta toisiaan. Mikäli suorat eivät leikkaa toisiaan, niiden sanotaan olevan \termi{yhdensuuntaiset suorat}{yhdensuuntaiset}.
+
+\begin{esimerkki}
+Suorat $l$ ja $s$ leikkaavat pisteessä $X$. Suorat $l$ ja $t$ leikkaavat pisteessä $Y$. Suorat $s$ ja $t$ ovat yhdensuuntaiset.
+
+\begin{center}
+\begin{kuva}
+	rajaa(minX = -3, maxX = 2, minY = -2, maxY = 2)
+	s = geom.suoraSuuntaan((-1, -1), 4, 1, "$s$", kohta = 0.7)
+	l = geom.suoraSuuntaan((-1, -1), 1, 4, "$l$", kohta = -0.2)
+	t = geom.suoraSuuntaan((0, 1), 4, 1, "$t$")
+	X = geom.leikkauspiste(l, s, "$X$", suunta = 120)
+	Y = geom.leikkauspiste(l, t, "$Y$", suunta = 120)
+\end{kuva}
+\end{center}
+\end{esimerkki}
+
+
 \section*{Kulma}
 
 Kaksi puolisuoraa, joilla on yhteinen alkupiste, jakavat tason kahteen osaan ja rajaavat siten kaksi \termi{kulma}{kulmaa}. Yhteistä alkupistettä
@@ -257,3 +275,35 @@ Kahden suoran leikkauspisteeseen muodostuvia vastakkaisia kulmia kutsutaan \term
 \end{kuva}
 \end{center}
 Ristikulmien yhtäsuuruus voidaan perustella todistaa huomaamalla, että koska $\alpha$ ja $\beta$ ovat vieruskulmia ja lisäksi $\beta$ ja $\gamma$ ovat vieruskulmia, $\alpha = 180^\circ - \beta$ ja $\gamma = 180^\circ - \beta$ eli $\alpha = \gamma$.
+
+\subsection*{Samankohtaiset kulmat}
+Mikäli kahdella kulmalla on joko vasemmat kyljet samalla suoralla tai oikeat kyljet samalla suoralla, kutsutaan kulmia \termi{samankohtaiset kulmat}{samankohtaisiksi kulmiksi}.
+
+\begin{esimerkki}
+\begin{kuva}
+	rajaa(minX = -4, maxX = 2, minY = -2, maxY = 4)
+	
+	A = (-2, -3)
+	B = (-1, 4)
+	C = (-4, 1)
+	D = (3, 3)
+	E = (-4, 0)
+	F = (7, 1)
+	
+	l = geom.suora(A, B, "$l$", kohta = 0.2)
+	s = geom.suora(C, D, "$s$", kohta = 0.8)
+	t = geom.suora(E, F, "$t$")
+	
+	P = geom.leikkauspiste(l, s, piirra = False)
+	Q = geom.leikkauspiste(l, t, piirra = False)
+	
+	geom.kulma(D, P, B)
+	geom.kulma(C, P, Q)
+	geom.kulma(F, Q, P)
+	geom.kulma(E, Q, A)
+\end{kuva}
+
+Kuvaan merkityt kulmat ovat pareittain samankohtaisia, koska kaikkien kulmien oikea kylki on suoralla $l$.
+\end{esimerkki}
+
+
