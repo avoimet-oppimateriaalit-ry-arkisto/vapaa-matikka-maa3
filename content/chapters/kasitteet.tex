@@ -171,6 +171,8 @@ Mikäli kulman oikealla kyljellä oleva piste, kärkipiste ja vasemmalla kyljell
 \]
 \end{esimerkki}
 
+\subsection*{Kulmien summa}
+
 Kun kulmat joiden suuruudet ovat $\alpha$ ja $\beta$ asetetaan vierekkäin, muodostuu kulma, jonka suuruus on $\alpha + \beta$.
 
 \begin{center}
@@ -214,3 +216,43 @@ Jos $\alpha > \beta$, voidaan muodostaa kulma jonka suuruus on $\alpha - \beta$ 
 	geom.kulma(A, O, B, r"$\alpha - \beta$", kasvata = 0.6)
 \end{kuva}
 \end{center}
+
+\subsection*{Vierus- ja ristikulmat}
+Kahta vierekkäistä kulmaa, joiden toiset kyljet yhtyvät ja toiset muodostavat suoran, kutsutaan \termi{vieruskulma}{vieruskulmiksi}. Koska ne muodostavat yhdessä oikokulman, niiden suuruuksien summa on $180^\circ$. 
+\begin{center}
+\begin{kuva}
+	skaalaa(2)
+	
+	O = (0, 0)
+	A = (1, 0)
+	B = (cos(1), sin(1))
+	C = (-1, 0)
+	
+	geom.jana(O, A)
+	geom.jana(O, B)
+	geom.jana(O, C)
+	
+	geom.kulma(A, O, B)
+	geom.kulma(B, O, C)
+\end{kuva}
+\end{center}
+
+Kahden suoran leikkauspisteeseen muodostuvia vastakkaisia kulmia kutsutaan \termi{ristikulma}{ristikulmiksi}. Ne ovat yhtä suuret.
+\begin{center}
+\begin{kuva}
+	O = (0, 0)
+	A = (2, -1)
+	B = (2, 1)
+	C = (-2, 1)
+	D = (-2, -1)
+	
+	geom.jana(O, A)
+	geom.jana(O, B)
+	geom.jana(O, C)
+	geom.jana(O, D)
+	
+	geom.kulma(A, O, B)
+	geom.kulma(C, O, D)
+\end{kuva}
+\end{center}
+
