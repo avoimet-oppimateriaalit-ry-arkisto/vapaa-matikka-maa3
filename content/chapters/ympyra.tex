@@ -1,15 +1,20 @@
 \section*{Ympyrä}
 
+\begin{luoKuva}{ympyraosat}
+	skaalaa(2)
+	keskipiste = geom.piste(0, 0, "keskipiste")
+	ympyra = geom.ympyra(keskipiste, 1, r"ympyr\"{a}", 30)
+	kehapiste = geom.leikkauspiste(
+		ympyra, geom.suoraSuuntaan(keskipiste, -1, 2, piirra = False), piirra = False
+	)
+	geom.jana(kehapiste, keskipiste, r"s\"{a}de")
+\end{luoKuva}
 \laatikko{
 \termi{ympyrä}{Ympyrä} on sellaisten pisteiden joukko, jotka ovat kiinteällä etäisyydellä tietystä pisteestä. Tätä kiinteää etäisyyttä kutsutaan ympyrän \termi{säde}{säteeksi} ja kyseistä pistettä ympyrän \termi{keskipiste}{keskipisteeksi}.
 }
-
-\begin{kuva}
-keskipiste = geom.piste(0, 0, "keskipiste")
-kehapiste = geom.piste(-1, 2)
-ympyra = geom.ympyra(keskipiste, geom.etaisyys(keskipiste, kehapiste), r"ympyr\"{a}", 30)
-geom.jana(kehapiste, keskipiste, r"s\"{a}de")
-\end{kuva}
+\begin{center}
+\naytaKuva{ympyraosat}
+\end{center}
 
 \begin{esimerkki}
 Kuu kiertää Maata likimäärin ympyränmuotoisella radalla, jonka keskipiste on Maa ja säde on Kuun ja Maan välinen etäisyys.
@@ -17,6 +22,24 @@ Kuu kiertää Maata likimäärin ympyränmuotoisella radalla, jonka keskipiste o
 
 (KUVA TÄHÄN)
 
+\begin{luoKuva}{ympyrajanne}
+	skaalaa(2)
+	O = geom.piste(0, 0)
+	w = geom.ympyra(O, 1)
+	s = geom.suoraSuuntaan(O, 1, 0, piirra = False)
+	l = geom.suoraSuuntaan((0.2, 0.6), 1, -0.2, piirra = False)
+	A = geom.leikkauspiste(w, s, valinta = False, piirra = False)
+	B = geom.leikkauspiste(w, s, valinta = True, piirra = False)
+	C = geom.leikkauspiste(w, l, valinta = False, piirra = False)
+	D = geom.leikkauspiste(w, l, valinta = True, piirra = False)
+	geom.jana(A, B, "halkaisija")
+	geom.jana(C, D, r"j\"{a}nne")
+\end{luoKuva}
 \laatikko{
-
+Ympyrän \termi{jänne}{jänne} on jana kahden ympyrän kehäpisteen välillä. Mikäli jänne kulkee ympyrän keskipisteen kautta, se on ympyrän \termi{halkaisija}{halkaisija}. Halkaisijan pituus on kaksi kertaa ympyrän säde.
 }
+\begin{center}
+\naytaKuva{ympyrajanne}
+\end{center}
+
+
