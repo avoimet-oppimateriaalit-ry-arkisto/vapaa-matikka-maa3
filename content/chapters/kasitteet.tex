@@ -251,8 +251,9 @@ Kahden suoran leikkauspisteeseen muodostuvia vastakkaisia kulmia kutsutaan \term
 	geom.jana(O, C)
 	geom.jana(O, D)
 	
-	geom.kulma(A, O, B)
-	geom.kulma(C, O, D)
+	geom.kulma(A, O, B, r"$\alpha$", kasvata = 0.1)
+	geom.kulma(B, O, C, r"$\beta$")
+	geom.kulma(C, O, D, r"$\gamma$", kasvata = 0.1)
 \end{kuva}
 \end{center}
-
+Ristikulmien yhtäsuuruus voidaan perustella todistaa huomaamalla, että koska $\alpha$ ja $\beta$ ovat vieruskulmia ja lisäksi $\beta$ ja $\gamma$ ovat vieruskulmia, $\alpha = 180^\circ - \beta$ ja $\gamma = 180^\circ - \beta$ eli $\alpha = \gamma$.
