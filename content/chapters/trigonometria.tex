@@ -40,3 +40,79 @@ Kuvan kolmiossa pätee
 \end{esimerkki}
 
 ...yksikköympyrä, tylpän kulman siniä ja kosinia tarvitaan...
+
+
+%mihin kohtaan sijoitetaan?
+Koordinaattiakselit jakavat koordinaatiston neljään osaan. Näitä osia kutusutaan neljänneksiksi ja niitä merkitään roomalaisin numeroin (I, II, III ja IV) alkaen positiivisesta $x$-akselista positiiviseen kiertosuuntaan (vastapäivään).
+
+\subsection{Yksikköympyrä}
+
+%vain tapauksissa 0-180 astetta, loput kulmat kurssilla 9
+
+Yksikköympyräksi kutsutaan koordinaatistoon pirrettyä ympyrää, jonka keskipiste on origossa ja säde yksi.
+
+%\FIXME yksikköympyrässä käytetään termiä kehäpiste. Termi esitellään vasta myöhemmin. Mikä on esitysjärjestys?
+Kulman kärki sijoitetaan origoon ja oikea kylki positiiviselle $x$-akselille.
+
+%pitääkö mainita?
+Kulman suuruutta mitataan positiiviseen kiertosuuntaan.
+
+% 
+% O=geom.piste(0,0)
+%         A=geom.piste(0.5, 0.866)
+%         B=geom.piste(0, 0.866)
+%         C=geom.piste(-0.5, 0.866)
+%         D=geom.piste(1,0)
+
+\begin{center}
+\begin{kuva}
+        kuvaaja.pohja(-1.5, 1.5, -1.5, 1.5)
+        O=(0,0)
+        A=geom.piste(0.5, 0.866, r"keh\"apiste")
+        B=(0, 0.866)
+        C=(-0.5, 0.866)
+        D=(1,0)
+        geom.jana(O, A)
+        geom.kulma(D, O, A, r"$\alpha$")
+        geom.ympyra(O,1)
+\end{kuva}
+\end{center}
+
+
+%sini
+\begin{center}
+\begin{kuva}
+        kuvaaja.pohja(-1.5, 1.5, -1.5, 1.5)
+        O=(0,0)
+        A=geom.piste(0.5, 0.866)
+        B=(0, 0.866)
+        C=(-0.5, 0.866)
+        D=(1,0)
+        geom.jana(O, A)
+        geom.kulma(D, O, A, r"$\alpha$")
+        geom.ympyra(O,1)
+        geom.jana(A,B)
+\end{kuva}
+\end{center}
+
+%kosini
+\begin{center}
+\begin{kuva}
+        kuvaaja.pohja(-1.5, 1.5, -1.5, 1.5)
+        O=(0,0)
+        A=geom.piste(0.5, 0.866)
+        B=(0, 0.866)
+        C=(-0.5, 0.866)
+        D=(1,0)
+        E=(0.5,0)
+        geom.jana(O, A)
+        geom.kulma(D, O, A, r"$\alpha$")
+        geom.ympyra(O,1)
+        geom.jana(A,E)
+\end{kuva}
+\end{center}
+
+%FIXME \todo{olisi kiva, jos kuvaajapohjasta olisi ''millimetripaperiversio''}
+
+
+
