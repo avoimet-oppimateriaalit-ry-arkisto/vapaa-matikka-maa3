@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/avoimet-oppimateriaalit-ry/vapaa-matikka-maa3.svg?branch=master)](https://travis-ci.org/avoimet-oppimateriaalit-ry/vapaa-matikka-maa3)
+
 ## Vapaa matikka MAA3 (Geometria)
 
 > Osa Vapaa matikka -kirjasarjaa lukion matematiikkaan. Part of Vapaa matikka textbook series for high school mathematics.
